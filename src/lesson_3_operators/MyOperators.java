@@ -6,6 +6,6 @@ public class MyOperators {
     }
 
     public static void useBasicOperators(){
-        //
+        double BMI;
     }
 }
