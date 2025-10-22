@@ -51,5 +51,16 @@ public class MyMain{
         // ВСЕГДА ИСХОДНЫЙ/РАБОЧИЙ КОД В ДЖАВЕ ХРАНИТСЯ В ФАЙЛАХ .java
         // БАЙТ-КОД хранится в документах с расширением .class
         // WELCOME
+        PrivateObject privateObject = PrivateObject.createObject();
+    }
+}
+
+class PrivateObject{
+    private PrivateObject(){
+        System.out.println("Created!");
+    }
+
+    public static PrivateObject createObject(){
+        return new PrivateObject();
     }
 }
