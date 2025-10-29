@@ -2,6 +2,7 @@ package lesson_9_abstracts;
 
 import lesson_9_abstracts.animals.*;
 import lesson_9_abstracts.controlpanel.ControlSmartTV;
+import lesson_9_abstracts.controlpanel.ControlTV;
 import lesson_9_abstracts.controlpanel.SamsungControlPanel;
 
 // Abstracts
