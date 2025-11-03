@@ -18,6 +18,10 @@ public class MainString {
     }
 
     public static void useStringMethods(){
+        // charAt, indexOf, split, trim() + REGULAR EXPRESSIONS
+    }
+
+    public static void useStringBuilder(){
         // StringBuilder, StringBuffer (no one uses)
         // Если вам нужна изменяемая строка - создаем StringBuilder
         String expand = "Archil";
