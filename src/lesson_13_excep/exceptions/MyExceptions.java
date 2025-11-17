@@ -7,14 +7,28 @@ import java.util.Scanner;
 public class MyExceptions {
     public static void main(String[] args) {
         // CODE
-        try {
-            getExceptions();
+        getExceptions();
+    }
+
+    public static void fileWriter(){
+        try(FileWriter output = new FileWriter("src/lesson_13_excep/exceptions/exceptions.txt")){
+            output.write(new Date().toString());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static void getExceptions() throws IOException {
+    public static void readLetters(){
+        try(FileOutputStream write = new FileOutputStream("src/lesson_13_excep/exceptions/exceptions.txt")) {
+            for (int letter = 65; letter < 91; letter++){
+                write.write((char) letter);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void getExceptions() {
         // Почему компилятор не остановил меня?
         // Ошибки такого плана, как их называют?
         // Run-Time ERROR (Ошибка времени выполнения)
@@ -22,11 +36,14 @@ public class MyExceptions {
         int number2 = new Scanner(System.in).nextInt();
 
         try{
-            System.out.println(number1 / number2); // Арифметическая ошибка программиста, НЕ ЗНАЕШЬ АРИФМЕТИКУ
+            System.out.println(number1 / number2);
         } catch (ArithmeticException e){
-            File file = new File("src/lesson_13_excep/exceptions/exceptions.txt");
-
-            new FileWriter(file).write(new Date() + " MISTAKE. EXCEPTION SAYS: " + e.getMessage());
+            try (FileWriter write = new FileWriter("src/lesson_13_excep/exceptions/exceptions.txt", true)){
+                write.write(new Date() + " -> MISTAKE: \n\t\t" +
+                        number1 + " \\ " + number2 + ": " + e.getMessage() + "\n");
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         }
 
         // ОТЛОВ ИСКЛЮЧЕНИЙ НУЖЕН ДВА ДВУХ СЛУЧАЕВ

@@ -1,0 +1,3 @@
+Welcome to FileOutputStream Class in Java.\Goodbye my friend!
+
+Goodbye my friend!

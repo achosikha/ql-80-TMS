@@ -1,0 +1,4 @@
+Mon Nov 17 21:39:29 GMT+04:00 2025 -> Exception handled: Index 4 out of bounds for length 4
+Mon Nov 17 21:39:50 GMT+04:00 2025 -> Exception handled: / by zero
+Mon Nov 17 21:39:58 GMT+04:00 2025 -> Exception handled: / by zero
+Mon Nov 17 21:40:03 GMT+04:00 2025 -> Exception handled: Index 4 out of bounds for length 4
