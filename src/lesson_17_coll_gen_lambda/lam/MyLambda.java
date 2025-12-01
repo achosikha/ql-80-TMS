@@ -6,7 +6,6 @@ import java.util.Comparator;
 
 public class MyLambda {
     public static void main(String[] args) {
-        //
         useBasicLambda();
     }
 
